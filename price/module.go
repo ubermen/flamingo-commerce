@@ -26,3 +26,27 @@ func (*Module) Depends() []dingo.Module {
 		new(locale.Module),
 	}
 }
+
+// FlamingoLegacyConfigAlias mapping
+func (*Module) FlamingoLegacyConfigAlias() map[string]string {
+	alias := make(map[string]string)
+	for _, v := range []string{
+		"locale.locale",
+		"locale.accounting.default.precision",
+		"locale.accounting.default.decimal",
+		"locale.accounting.default.thousand",
+		"locale.accounting.default.formatZero",
+		"locale.accounting.default.format",
+		"locale.accounting.default.formatLong",
+		"locale.numbers.decimal",
+		"locale.numbers.thousand",
+		"locale.numbers.precision",
+		"locale.date.dateFormat",
+		"locale.date.timeFormat",
+		"locale.date.dateTimeFormat",
+		"locale.date.location",
+	} {
+		alias[v] = "core." + v
+	}
+	return alias
+}
