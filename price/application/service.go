@@ -42,7 +42,7 @@ func (s *Service) FormatPrice(price domain.Price) string {
 
 	ac := accounting.Accounting{
 		Symbol:    currency,
-		Precision: 2,
+		Precision: 0,
 	}
 	precision, ok := configForCurrency["precision"].(float64)
 	if ok {
