@@ -1,4 +1,4 @@
-module flamingo.me/flamingo-commerce/v3
+module github.com/ubermen/flamingo-commerce
 
 go 1.21
 
@@ -6,6 +6,7 @@ toolchain go1.21.0
 
 require (
 	flamingo.me/dingo v0.2.10
+	flamingo.me/flamingo-commerce/v3 v3.9.0
 	flamingo.me/flamingo/v3 v3.8.0
 	flamingo.me/form v1.1.2
 	flamingo.me/graphql v1.11.1
